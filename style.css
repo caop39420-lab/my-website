@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffffff;
+  font-family: Roboto, Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Thanh điều hướng */
+.navbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: 60px;
+  padding: 0 16px;
+  background-color: #ffffff;
+}
+
+/* Thiết kế Nút Tròn Nổi (Thiết kế nổi dạng Capsule/Floating Gemini Style) */
+.floating-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  /* Đổ bóng tạo độ nổi trên màn hình */
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.08);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s;
+  outline: none;
+}
+
+/* Hiệu ứng bấm nút */
+.floating-btn:active {
+  transform: scale(0.92);
+  background-color: #f1f3f4;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Cụm thương hiệu */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.blue-circle {
+  width: 18px;
+  height: 18px;
+  background-color: #065fd4;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.brand-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f0f0f;
+  letter-spacing: -0.3px;
+}
+
+.main-content {
+  padding: 24px 16px;
+  color: #4b5563;
+}
+
+/* Giao diện khác (Trượt hiển thị lên) */
+.other-view {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+  z-index: 100;
+  transform: translateX(-100%); /* Mặc định ẩn sang bên trái */
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 16px;
+}
+
+/* Trạng thái hiển thị giao diện mới */
+.other-view.active {
+  transform: translateX(0);
+}
+
+.other-view-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.other-view-body {
+  font-size: 16px;
+  color: #1f2937;
+}

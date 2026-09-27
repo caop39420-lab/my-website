@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>No.001</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Thanh Header -->
+  <header class="navbar">
+    <!-- Nút 3 gạch hình tròn nổi (Elevated Floating Button) -->
+    <button id="menuBtn" class="floating-btn" aria-label="Menu">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3c4043" stroke-width="2.5" stroke-linecap="round">
+        <line x1="3" y1="6" x2="21" y2="6"></line>
+        <line x1="3" y1="12" x2="21" y2="12"></line>
+        <line x1="3" y1="18" x2="21" y2="18"></line>
+      </svg>
+    </button>
+
+    <!-- Logo thương hiệu -->
+    <div class="brand">
+      <span class="blue-circle"></span>
+      <span class="brand-name">No.001</span>
+    </div>
+  </header>
+
+  <!-- Giao diện chính (Màn hình 1) -->
+  <main class="main-content">
+    <h2>Giao diện chính</h2>
+    <p>Nhấp vào nút 3 gạch tròn ở góc trên bên trái để mở giao diện mới.</p>
+  </main>
+
+  <!-- Giao diện khác (Màn hình 2 / Overlay View) -->
+  <div id="otherView" class="other-view">
+    <div class="other-view-header">
+      <button id="closeBtn" class="floating-btn" aria-label="Đóng">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#3c4043" stroke-width="2.5" stroke-linecap="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+      <h2>Giao diện mới</h2>
+    </div>
+    <div class="other-view-body">
+      <p>Bạn đã chuyển sang giao diện khác thành công! 🎉</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
